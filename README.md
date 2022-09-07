@@ -1,12 +1,14 @@
 ## usersテーブル
 
-| name      | string  | option                    |
-| --------- | ------- | ------------------------- |
-| nickname  | string  | null: false               |
-| encrypted | string  | null: false               |
-| height    | integer | null: false               |
-| email     | string  | null: false, unique: true |
-| sex       | string  | null: false               |
+| name          | string  | option                    |
+| ------------- | ------- | ------------------------- |
+| nickname      | string  | null: false               |
+| encrypted     | string  | null: false               |
+| height        | float   | null: false               |
+| email         | string  | null: false, unique: true |
+| sex_id        | integer | null: false               |
+| weight        | float   | null: false               |
+| target_weight | float   | null: false               |
 
 has_many :records
 has_many :comments
