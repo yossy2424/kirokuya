@@ -9,5 +9,7 @@ class User < ApplicationRecord
 
   validate :nickname
   validate :height
+  validate :weight
   validate :sex
+  validate :target_weight
 end
