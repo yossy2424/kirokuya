@@ -4,12 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :records
-  has_many :comments
+  has_many :record
 
-  validate :nickname
-  validate :height
-  validate :weight
-  validate :sex
-  validate :target_weight
+  validate :nickname, presence: true
+  validate :height, presence: true
+  validate :weight, presence: true
+  validate :sex, presence: true
+  validate :target_weight, presence: true
 end

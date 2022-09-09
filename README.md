@@ -11,17 +11,16 @@
 | target_weight | float   | null: false               |
 
 has_many :records
-has_many :comments
 
 ## recordsテーブル
 
 | name                | string    | option                         |
 | ------------------- | --------- | ------------------------------ |
-| weight              | integer   | null: false                    |
-| body fat percentage | integer   | null: false                    |
-| month_id            | integer   | null: false                    |
-| date_id             | integer   | null: false                    |
-| user_id             | reference | null: false, foreign_key: true |
+| weight              | float     | null: false                    |
+| body fat percentage | float     | null: false                    |
+| month               | integer   | null: false                    |
+| date                | integer   | null: false                    |
+| user                | reference | null: false, foreign_key: true |
 
 belong_to :user
 has_one :comments
@@ -33,3 +32,6 @@ has_one :comments
 | comment   | text      |                                |
 | user_id   | reference | null :false ,foreign_key :true |
 | record_id | reference | null :false ,foreign_key :true |
+
+belong_to :user
+belong_to :record
